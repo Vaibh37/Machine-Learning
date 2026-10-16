@@ -19,23 +19,33 @@ Last reviewed: **16 October 2026**. Progress levels here describe the study sess
 | Partial derivatives of prediction loss | Derived `dw = 2*(pred_y-y)*x` and `db = 2*(pred_y-y)`; explained why x appears | [Gradient lesson](https://github.com/Vaibh37/ML-MATH/blob/main/calculus/02-gradient-descent-single-sample.md) |
 | Learning rate and overshooting | Compared alpha 0.1 (loss 4→36) with alpha 0.01 (loss 4→1.44) for a separate example | [Math worked example](https://github.com/Vaibh37/ML-MATH/blob/main/calculus/02-gradient-descent-single-sample.md) |
 | First gradient descent training loop | Personally coded a 5-iteration pure-Python loop for one x=2, y=10 example; updated both w and b; prediction 7→9.90625, squared loss 9→0.0087890625 | [Notes and verification](https://github.com/Vaibh37/Neural-Network/blob/main/notes/06-first-gradient-descent-training-loop.md) |
+| Vectorized multiple-example predictions | Used one shared linear neuron on x=[1,2,3,4] and checked (4,) NumPy output shape | [Batch training implementation](https://github.com/Vaibh37/Neural-Network/blob/main/examples/train_batch_neuron_numpy.py) |
+| Dataset MSE and batch gradients | Independently corrected averaging order; obtained initial MSE 21, ∂L/∂w=-25, ∂L/∂b=-8 | [Dataset gradient lesson](https://github.com/Vaibh37/Neural-Network/blob/main/notes/07-vectorized-batch-gradient-descent.md) |
+| Full-batch training loop | Personally coded NumPy loop over 4 examples for 5 epochs; MSE 21→approximately 0.325768 | [Runnable code](https://github.com/Vaibh37/Neural-Network/blob/main/examples/train_batch_neuron_numpy.py) |
+| ReLU derivative in NumPy | Practiced elementwise mask (z > 0).astype(float); learned what .astype(float) does | [Activation derivative example](https://github.com/Vaibh37/Neural-Network/blob/main/examples/relu_derivative_numpy.py) |
+| Chain rule through activation (introduced) | Explained z→a→L and ∂L/∂z = (∂L/∂a)(∂a/∂z); not yet extended through all model parameters | [Chain-rule introduction](https://github.com/Vaibh37/Neural-Network/blob/main/notes/08-relu-derivative-and-chain-rule-intro.md) |
 | Python for-loop reassignment | Explained why the updated w/b values persist across iterations and why an outside print shows the last result | [Python loop trace](https://github.com/Vaibh37/Python-cheat_sheet/blob/main/FOR_LOOP_TRACE.md) |
 
 ## Current checkpoint — done vs not done
 
-**Implemented (16 October):** forward prediction, single-example squared loss, chain-rule gradients for one weight and bias, update formulas and five repeats in **plain Python**. The example has verified expected results. The implementation doesn't require NumPy.
+**Implemented (16 October):** single-example training in plain Python and four-example NumPy full-batch gradient descent. Used one shared linear neuron, vectorized predictions, dataset MSE, correct averaged weight and bias gradients, parameter updates, and a five-epoch loop. Dataset MSE changed **21.0 -> 0.325768**.
 
-**Introduced:** PyTorch automatic differentiation as a concept; understanding that hidden-layer backpropagation extends the chain rule.
+**Practiced:** ReLU derivative in NumPy using Boolean comparisons and .astype(float).
 
-**Not implemented:** vectorized training over multiple examples, full-dataset MSE gradients, activation derivatives for training, backpropagation through a hidden layer, trained XOR classifier, or validation on unseen examples.
+**Introduced but not yet fully implemented:** chain-rule backward step through ReLU: ∂L/∂z = (∂L/∂a)(∂a/∂z). Understanding of the connection is progressing; the full chain to w and b is still next.
+
+**Not implemented:** training a multi-neuron hidden layer, full hidden-layer backpropagation, XOR classifier, or validation on unseen examples. The existing hidden-layer forward pass still uses hand-picked parameters.
 
 ## Upcoming lessons (not completed)
 
-1. Move the one-example Python training loop into **NumPy arrays** and compare with equivalent scalar code.
-2. Learn vectorized gradients of **mean** squared error over several training examples.
-3. Derive activation derivatives and backpropagation through a hidden layer.
-4. Aim by **20 October 2026** to train a **2→3→1 XOR network**, verify all four XOR input combinations, store editable diagrams and PNG/SVG exports, and draft a technical Medium article. This is a target, not a completed milestone.
-5. Later: pandas, scikit-learn workflow, evaluation, PyTorch, broader deep learning, transformers/LLMs, RAG, deployment and MLOps. Continue manageable Python DSA practice in parallel.
+1. Complete ∂L/∂w and ∂L/∂b through an activated neuron using the chain rule.
+2. Apply backward propagation across a hidden layer, with explicit shapes and notation.
+3. Train a **2 -> 3 -> 1** NumPy XOR network; verify all four XOR input combinations and training behavior.
+4. Target around **20 October 2026** for XOR and editable Excalidraw diagrams with image exports, subject to understanding.
+5. Draft a complete technical article after verification for **Medium and X Articles**, pointing to GitHub source.
+6. Later: pandas, scikit-learn, evaluation, PyTorch, LLM internals, RAG, LangChain, LangGraph, ML deployment and MLOps. Continue Python DSA in parallel.
+
+See [training-workflow checkpoint](notes/03-first-dataset-training-workflow.md).
 
 ## Completed worked result: three-neuron hidden layer
 

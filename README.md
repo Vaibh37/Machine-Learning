@@ -9,7 +9,8 @@ Practical notes and project milestones for learning machine learning from first 
 1. [Current study progress](STUDY_PROGRESS.md) — what was practiced and what is next.
 2. [Core concepts and terminology](notes/01-ml-foundations-overview.md) — reference and learning preview.
 3. [From arrays to neural networks](notes/02-math-to-neural-networks.md) — how today's math and NumPy exercises connect to a forward pass.
-4. [Learning roadmap](ROADMAP.md) — ordered topics and planned hands-on projects.
+4. [First dataset training workflow](notes/03-first-dataset-training-workflow.md) — what full-batch training now demonstrates and does not demonstrate.
+5. [Learning roadmap](ROADMAP.md) — ordered topics and planned hands-on projects.
 
 ## Related repositories
 
@@ -33,4 +34,4 @@ Practical notes and project milestones for learning machine learning from first 
 
 Python and NumPy now. pandas, scikit-learn, PyTorch, model evaluation, deployment, and MLOps will be added only as they are studied.
 
-**Last study checkpoint:** 16 October 2026 — five successful gradient descent updates in a pure-Python single-example linear model. See [study progress](STUDY_PROGRESS.md) and the [first training loop](https://github.com/Vaibh37/Neural-Network/blob/main/notes/06-first-gradient-descent-training-loop.md). The multi-layer XOR project remains planned.
+**Last study checkpoint:** 16 October 2026 — implemented the original single-example training loop and then a **four-example, five-epoch NumPy full-batch loop** (MSE **21→~0.325768**). ReLU derivative practiced; chain rule through activation introduced. **Hidden-layer backpropagation and XOR training remain planned.** See [study progress](STUDY_PROGRESS.md) and [runnable batch training](https://github.com/Vaibh37/Neural-Network/blob/main/examples/train_batch_neuron_numpy.py).
