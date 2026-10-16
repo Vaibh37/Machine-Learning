@@ -33,16 +33,16 @@ Last reviewed: **15 October 2026**. Progress levels here describe the study sess
 
 ## Completed worked result: three-neuron hidden layer
 
-$$
+```math
 x=\begin{bmatrix}2\\-1\end{bmatrix},\quad
 W=\begin{bmatrix}2&1\\-1&3\\1&-2\end{bmatrix},\quad
 b=\begin{bmatrix}1\\2\\-3\end{bmatrix}.
-$$
+```
 
-$$
+```math
 Z=Wx+b=\begin{bmatrix}4\\-3\\1\end{bmatrix},
 \quad
-A=\operatorname{ReLU}(Z)=\begin{bmatrix}4\\0\\1\end{bmatrix}.
-$$
+A=\mathrm{ReLU}(Z)=\begin{bmatrix}4\\0\\1\end{bmatrix}.
+```
 
 Final shape: **(3, 1)**. These are hand-picked weights, not trained parameters.
