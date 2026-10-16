@@ -1,6 +1,6 @@
 # Learning Progress
 
-Last reviewed: **15 October 2026**. Progress levels here describe the study session, not job-readiness or model-training capability.
+Last reviewed: **16 October 2026**. Progress levels here describe the study session, not job-readiness or model-training capability.
 
 ## Practiced
 
@@ -16,20 +16,26 @@ Last reviewed: **15 October 2026**. Progress levels here describe the study sess
 | Linear regression predictions | Implemented `y_pred = w * x + b` and evaluated MSE at hand-picked weights: 750 at w=10, 187.5 at w=15 | [Prediction example](https://github.com/Vaibh37/Neural-Network/blob/main/examples/linear_regression_and_mse.py) |
 | Introductory derivatives | Power rule, constants, sum rule, nested chain rule, notation and simple partials practiced | [Calculus lessons](https://github.com/Vaibh37/ML-MATH/tree/main/calculus) |
 | Deriving a one-sample loss | Connected `x=4, y=10` to `L(w,b)=(4w+b-10)^2` | [Math loss derivation](https://github.com/Vaibh37/ML-MATH/blob/main/calculus/01-derivatives-and-loss.md) |
+| Partial derivatives of prediction loss | Derived `dw = 2*(pred_y-y)*x` and `db = 2*(pred_y-y)`; explained why x appears | [Gradient lesson](https://github.com/Vaibh37/ML-MATH/blob/main/calculus/02-gradient-descent-single-sample.md) |
+| Learning rate and overshooting | Compared alpha 0.1 (loss 4→36) with alpha 0.01 (loss 4→1.44) for a separate example | [Math worked example](https://github.com/Vaibh37/ML-MATH/blob/main/calculus/02-gradient-descent-single-sample.md) |
+| First gradient descent training loop | Personally coded a 5-iteration pure-Python loop for one x=2, y=10 example; updated both w and b; prediction 7→9.90625, squared loss 9→0.0087890625 | [Notes and verification](https://github.com/Vaibh37/Neural-Network/blob/main/notes/06-first-gradient-descent-training-loop.md) |
+| Python for-loop reassignment | Explained why the updated w/b values persist across iterations and why an outside print shows the last result | [Python loop trace](https://github.com/Vaibh37/Python-cheat_sheet/blob/main/FOR_LOOP_TRACE.md) |
 
-## Introduced (not yet implemented)
+## Current checkpoint — done vs not done
 
-- Training as repeated forward pass → loss → parameter update.
-- Gradient descent direction from positive/negative slopes and the learning-rate update formula.
-- A single-example squared-error gradient; no full-dataset gradient code yet.
+**Implemented (16 October):** forward prediction, single-example squared loss, chain-rule gradients for one weight and bias, update formulas and five repeats in **plain Python**. The example has verified expected results. The implementation doesn't require NumPy.
+
+**Introduced:** PyTorch automatic differentiation as a concept; understanding that hidden-layer backpropagation extends the chain rule.
+
+**Not implemented:** vectorized training over multiple examples, full-dataset MSE gradients, activation derivatives for training, backpropagation through a hidden layer, trained XOR classifier, or validation on unseen examples.
 
 ## Upcoming lessons (not completed)
 
-1. **16 October:** review derivative notation and apply the chain rule to loss; implement weight **and** bias updates in NumPy.
-2. Implement and verify a linear-regression training loop (not done).
-3. Derive sigmoid/ReLU gradients and backpropagation through a hidden layer (not done).
-4. Aim by **20 October 2026** to train a **2→3→1 XOR network**, verify all four XOR input combinations, store diagrams and draft a technical Medium article. Target, not guarantee.
-5. Then: pandas, scikit-learn workflow, evaluation, PyTorch, broader deep learning, transformers/LLMs, RAG, deployment and MLOps. Continue manageable Python DSA practice in parallel.
+1. Move the one-example Python training loop into **NumPy arrays** and compare with equivalent scalar code.
+2. Learn vectorized gradients of **mean** squared error over several training examples.
+3. Derive activation derivatives and backpropagation through a hidden layer.
+4. Aim by **20 October 2026** to train a **2→3→1 XOR network**, verify all four XOR input combinations, store editable diagrams and PNG/SVG exports, and draft a technical Medium article. This is a target, not a completed milestone.
+5. Later: pandas, scikit-learn workflow, evaluation, PyTorch, broader deep learning, transformers/LLMs, RAG, deployment and MLOps. Continue manageable Python DSA practice in parallel.
 
 ## Completed worked result: three-neuron hidden layer
 

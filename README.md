@@ -16,7 +16,7 @@ Practical notes and project milestones for learning machine learning from first 
 | Repository | What belongs there |
 |---|---|
 | [ML-MATH](https://github.com/Vaibh37/ML-MATH) | Vectors, angles, matrices, broadcasting, formulas and math diagrams |
-| [Neural-Network](https://github.com/Vaibh37/Neural-Network) | Neurons, activations, forward passes, loss introduction, NN examples |
+| [Neural-Network](https://github.com/Vaibh37/Neural-Network) | Neurons, activations, forward passes, loss, training and backpropagation notes as studied |
 | [Python-cheat_sheet](https://github.com/Vaibh37/Python-cheat_sheet) | Python and NumPy syntax, runnable snippets, DSA reference |
 | **Machine-Learning (here)** | Learning index, ML workflow concepts, models, experiments and future evaluations |
 
@@ -33,4 +33,4 @@ Practical notes and project milestones for learning machine learning from first 
 
 Python and NumPy now. pandas, scikit-learn, PyTorch, model evaluation, deployment, and MLOps will be added only as they are studied.
 
-**Last study checkpoint:** 15 October 2026.
+**Last study checkpoint:** 16 October 2026 — five successful gradient descent updates in a pure-Python single-example linear model. See [study progress](STUDY_PROGRESS.md) and the [first training loop](https://github.com/Vaibh37/Neural-Network/blob/main/notes/06-first-gradient-descent-training-loop.md). The multi-layer XOR project remains planned.

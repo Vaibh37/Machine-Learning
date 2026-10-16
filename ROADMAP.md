@@ -18,8 +18,8 @@ This is a learning sequence, not a fixed completion guarantee. Do not mark a mod
 - Input features, targets, predictions and datasets.
 - **Practiced:** linear regression predictions `y_pred = w * x + b`, squared error, NumPy MSE, manual comparison of losses at different weights.
 - **Practiced:** introductory differentiation (power, chain and partial derivative rules; loss notation).
-- **Introduced:** gradient descent direction and parameter-update equation.
-- **Next:** derive gradients for full-dataset MSE, implement gradient descent for both weight and bias, then train a simple model and inspect its failure cases.
+- **Implemented 16 October:** manual single-example gradients, weight and bias updates, and a five-epoch loop in plain Python; prediction 7→9.90625, squared loss 9→0.0087890625.
+- **Next:** convert to NumPy arrays, derive gradients for full-dataset MSE, train on multiple examples and examine model limitations.
 - pandas and scikit-learn workflows, data splits and evaluation.
 
 ## Phase 3 — Neural network training (upcoming)
@@ -27,10 +27,10 @@ This is a learning sequence, not a fixed completion guarantee. Do not mark a mod
 - Dense layers and activation functions (forward pass practiced).
 - Loss functions for regression and classification.
 - Power rule, chain rule and partial derivatives (practiced on small examples); backpropagation (upcoming).
-- Learnable weights and biases, optimizer steps and a training loop.
+- Learnable weights and biases, optimizer steps and a training loop (**single linear neuron practiced; multi-layer training not yet done**).
 - PyTorch implementation and a documented end-to-end experiment.
 
-**Evidence so far:** [Neural-Network](https://github.com/Vaibh37/Neural-Network) contains forward-pass calculations, *not* a trained classifier.
+**Evidence so far:** [Neural-Network](https://github.com/Vaibh37/Neural-Network) includes a trained single-example linear neuron and forward-pass calculations for a hand-weighted hidden layer, *not* a trained XOR classifier.
 
 ## Phase 4 — Deep learning and modern ML (future)
 
