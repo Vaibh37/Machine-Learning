@@ -1,6 +1,13 @@
 # Learning Progress
 
-Last reviewed: **16 October 2026**. Progress levels here describe the study session, not job-readiness or model-training capability.
+Last reviewed: **18 October 2026**. Progress levels describe demonstrated exercises, not job-readiness. Historical 16 October checkpoints remain below.
+
+## New completed milestone — 18 October 2026
+
+**Full XOR 2 → 3 → 1 NumPy neural network** implemented with ReLU hidden activation, sigmoid output, dataset MSE, manual backpropagation for all 13 trainable parameters, randomized initialization, and 5,000 full-batch gradient descent updates. Final MSE: **0.00471529585312808**; all four XOR training rows classified correctly. Not a separate held-out evaluation. [Experiment and limitations](notes/04-xor-multilayer-network-experiment.md) · [Runnable code](https://github.com/Vaibh37/Neural-Network/blob/main/examples/xor_network.py) · [12 high-resolution diagrams and Excalidraw sources](https://github.com/Vaibh37/Neural-Network/tree/main/assets/xor).
+
+Full numerical gradient checking was deferred by choice. Gradio deployment is skipped; documentation is the focus before writing an article.
+
 
 ## Practiced
 
@@ -26,7 +33,7 @@ Last reviewed: **16 October 2026**. Progress levels here describe the study sess
 | Chain rule through activation (introduced) | Explained z→a→L and ∂L/∂z = (∂L/∂a)(∂a/∂z); not yet extended through all model parameters | [Chain-rule introduction](https://github.com/Vaibh37/Neural-Network/blob/main/notes/08-relu-derivative-and-chain-rule-intro.md) |
 | Python for-loop reassignment | Explained why the updated w/b values persist across iterations and why an outside print shows the last result | [Python loop trace](https://github.com/Vaibh37/Python-cheat_sheet/blob/main/FOR_LOOP_TRACE.md) |
 
-## Current checkpoint — done vs not done
+## Historical checkpoint — 16 October (done vs not done)
 
 **Implemented (16 October):** single-example training in plain Python and four-example NumPy full-batch gradient descent. Used one shared linear neuron, vectorized predictions, dataset MSE, correct averaged weight and bias gradients, parameter updates, and a five-epoch loop. Dataset MSE changed **21.0 -> 0.325768**.
 
