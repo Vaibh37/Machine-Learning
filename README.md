@@ -2,7 +2,7 @@
 
 Practical notes and project milestones for learning machine learning from first principles. This repository is the **index and connecting layer** between math, NumPy, neural networks, and future model training. It does not duplicate every detailed note.
 
-> Status: foundations in progress. Nothing here claims that a trained production model has been built.
+> Status: **first NumPy multilayer network trained on XOR (18 October 2026)**. This is an educational four-example model, not a production model.
 
 ## Start here
 
@@ -10,7 +10,8 @@ Practical notes and project milestones for learning machine learning from first 
 2. [Core concepts and terminology](notes/01-ml-foundations-overview.md) — reference and learning preview.
 3. [From arrays to neural networks](notes/02-math-to-neural-networks.md) — how today's math and NumPy exercises connect to a forward pass.
 4. [First dataset training workflow](notes/03-first-dataset-training-workflow.md) — what full-batch training now demonstrates and does not demonstrate.
-5. [Learning roadmap](ROADMAP.md) — ordered topics and planned hands-on projects.
+5. [XOR multilayer neural network experiment](notes/04-xor-multilayer-network-experiment.md) — dataset, 2→3→1 architecture, MSE, 5,000 epochs, limitations, and verified predictions.
+6. [Learning roadmap](ROADMAP.md) — ordered topics and planned hands-on projects.
 
 ## Related repositories
 
@@ -34,4 +35,4 @@ Practical notes and project milestones for learning machine learning from first 
 
 Python and NumPy now. pandas, scikit-learn, PyTorch, model evaluation, deployment, and MLOps will be added only as they are studied.
 
-**Last study checkpoint:** 16 October 2026 — implemented the original single-example training loop and then a **four-example, five-epoch NumPy full-batch loop** (MSE **21→~0.325768**). ReLU derivative practiced; chain rule through activation introduced. **Hidden-layer backpropagation and XOR training remain planned.** See [study progress](STUDY_PROGRESS.md) and [runnable batch training](https://github.com/Vaibh37/Neural-Network/blob/main/examples/train_batch_neuron_numpy.py).
+**Latest checkpoint: 18 October 2026.** Implemented **full multilayer XOR training from scratch in NumPy**, including random initialization, hidden-layer and output-layer gradients, and 5,000 epochs. All four XOR training samples are classified correctly; final MSE **0.00471529585312808**. This is training-set performance, not a separate generalization test. See [XOR experiment](notes/04-xor-multilayer-network-experiment.md), [Neural-Network code](https://github.com/Vaibh37/Neural-Network/blob/main/examples/xor_network.py) and [12 editable diagrams](https://github.com/Vaibh37/Neural-Network/tree/main/assets/xor).
