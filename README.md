@@ -4,9 +4,11 @@ these are my notes while i learn machine learning with python
 
 i use small data so i can see what the model does
 
-the notebooks have code and short notes together
-the python folder has the same kind of practice in normal scripts
-the notes folder is for quick revision and mistakes i want to remember
+the notebooks have code with short notes
+
+the python folder has scripts i can run
+
+the notes folder helps me revise
 
 ## what i have learned so far
 
@@ -14,7 +16,7 @@ the notes folder is for quick revision and mistakes i want to remember
 
 [notebook](notebooks/01_linear_regression.ipynb) and [python practice](python/linear_regression.py)
 
-predict a number and check the error
+predict a number and measure the error
 
 ### logistic regression
 
@@ -26,7 +28,7 @@ predict a class and read its estimated probability
 
 [notebook](notebooks/03_preprocessing.ipynb) and [python practice](python/preprocessing_practice.py)
 
-basic StandardScaler and OneHotEncoder practice
+basic practice with StandardScaler and OneHotEncoder
 
 ### classification metrics
 
@@ -34,13 +36,13 @@ basic StandardScaler and OneHotEncoder practice
 
 confusion matrix and the meaning of precision recall and F1
 
-i still need to practise the F1 function and classification report
+i need more code practice with F1 and classification report
 
 ### knn
 
 [notebook](notebooks/05_knn.ipynb) and [python practice](python/knn_practice.py)
 
-find the nearest training points then vote
+find close training points and use their classes to vote
 
 ### countvectorizer
 
@@ -52,7 +54,33 @@ turn words into numbers by counting them
 
 [notebook](notebooks/07_naive_bayes.ipynb) and [python practice](python/naive_bayes_spam.py)
 
-learn from labelled text and predict spam or not spam
+learn word patterns and predict spam or not spam
+
+### decision tree
+
+[notebook](notebooks/08_decision_tree.ipynb) and [python practice](python/decision_tree_practice.py)
+
+learn questions that divide the training data
+
+use gini to check how mixed a group is
+
+use weighted gini to compare splits
+
+learn why the tree can split between two values
+
+check depth and the minimum number of samples for a split or a leaf
+
+read the tree rules and feature importance
+
+train on 50 practice students
+
+test the model on data it did not use for learning
+
+enter study hours and predict pass or fail
+
+this example uses made up data
+
+it is not a real exam prediction tool
 
 ## revision
 
@@ -64,7 +92,7 @@ learn from labelled text and predict spam or not spam
 
 ## run this on my laptop
 
-install packages from requirements.txt
+install the needed packages
 
 ```bash
 python -m pip install -r requirements.txt
@@ -72,18 +100,22 @@ python -m pip install -r requirements.txt
 
 open the notebooks in VS Code with the Jupyter extension
 
-or run a script
+or run the decision tree script
 
 ```bash
-python python/naive_bayes_spam.py
+python python/decision_tree_practice.py
 ```
 
 ## next
 
-practise f1_score and classification_report
+learn entropy for decision trees
 
-then start decision trees
+learn how to choose tree settings
 
-i have not marked decision trees random forests svm or k means as completed
+learn cross validation
 
-these are small learning examples and not real production models
+build a larger classification project
+
+random forest and other models are still ahead
+
+these are practice lessons and not production models
