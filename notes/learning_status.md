@@ -1,6 +1,6 @@
 # where i am right now
 
-updated 30 october 2026
+updated 31 october 2026
 
 ## covered in practice
 
@@ -8,7 +8,7 @@ linear regression with fit predict coef and intercept
 
 mae mse and r2 on small data
 
-logistic regression with train_test_split predict and predict_proba
+logistic regression with train and test data
 
 confusion matrix and the meaning of precision and recall
 
@@ -18,9 +18,23 @@ knn distance nearest neighbours and KNeighborsClassifier
 
 naive bayes with MultinomialNB
 
-CountVectorizer with fit_transform transform get_feature_names_out and toarray
+CountVectorizer with word counts and text features
 
-a small text spam example
+a small spam classifier
+
+decision tree classification with DecisionTreeClassifier
+
+gini and weighted gini
+
+split thresholds and tree depth
+
+min_samples_split and min_samples_leaf
+
+feature importance and export_text
+
+training and testing on 50 practice samples
+
+new class predictions from hours studied
 
 ## introduced but need more practice
 
@@ -28,15 +42,21 @@ StandardScaler
 
 OneHotEncoder
 
-real train and test data with better datasets
+f1_score and classification_report
+
+working with larger real datasets
 
 ## not done yet
 
-f1_score in code
+entropy for decision trees
 
-classification_report in code
+tree tuning and cross validation
 
-decision trees
+decision tree pruning
+
+decision tree regression
+
+a larger decision tree project
 
 random forest
 
@@ -44,10 +64,10 @@ support vector machines
 
 k means
 
-cross validation and model tuning
+## reminder
 
-## small reminder
+finishing a notebook means i practiced a topic
 
-finishing one notebook means i practiced a topic
+it does not mean i know everything about the topic
 
-it does not mean i know everything about that algorithm
+the small student data is not real exam data
