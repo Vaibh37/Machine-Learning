@@ -2,15 +2,13 @@
 
 ## knn
 
-i was thinking that knn looks only left or only right
+i thought knn looks only left or only right
 
-no
+it does not
 
-it measures the distance to all training points
+it measures distance to all training points
 
 then it takes the closest k points
-
-in a one number example the distance from 3 to 8 is 5
 
 ## countvectorizer
 
@@ -22,7 +20,7 @@ the vocabulary is in alphabetical order by default
 
 every message uses that same column order
 
-the number in a cell is the count of that word
+each number is a word count
 
 ## fit and transform
 
@@ -56,9 +54,9 @@ new_X = vectorizer.transform(new_email)
 model.predict([[3]])
 ```
 
-outer brackets hold samples
+the outside list holds samples
 
-inner brackets hold the features for one sample
+the inside list holds features for one sample
 
 ## naive bayes probabilities
 
@@ -68,6 +66,72 @@ predict_proba returns one estimated probability for each class
 
 classes_ tells me the order
 
-i can use the model without doing Laplace smoothing maths by hand
+## decision tree gini
 
-later i can study why the maths works
+i mixed up group size and class purity
+
+gini 0 means every sample in that group has one class
+
+two groups do not need equal sample counts to be pure
+
+gini 0 point 5 means two classes have equal shares
+
+## decision tree split
+
+the model chose hours instead of attendance
+
+hours gave two pure groups in the small example
+
+the split value was 3 point 5 because it was between 3 and 4
+
+## feature importance
+
+an importance score of 1 means a feature caused all the impurity reduction in that tree
+
+it does not mean the model has perfect accuracy
+
+attendance was not used in the small example
+
+## leaf size
+
+min_samples_leaf sets the minimum number in each leaf
+
+a node with 6 samples cannot split into two leaves of at least 4 samples
+
+the tree has depth 0 in that case
+
+## one feature has two dimensions
+
+this gives a one dimensional list
+
+```python
+X = [row[0] for row in data]
+```
+
+this gives the two dimensional data the model needs
+
+```python
+X = [[row[0]] for row in data]
+```
+
+## feature names
+
+i gave two names to a model with one feature
+
+export_text needs one name for each feature column
+
+## accuracy check
+
+the model does not have a method named accuracy_score
+
+for a classifier i can use model.score on X and y
+
+## predict output
+
+predict returns an array
+
+prediction at position 0 is the first result
+
+the if statement only turns the class into a word
+
+it does not make the model learn
