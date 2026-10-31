@@ -24,6 +24,19 @@ gini = 1 - (p0 ** 2 + p1 ** 2)
 print("gini before split", gini)
 print("gini after pure split", 0)
 
+# a larger group affects weighted gini more
+left_gini = 1 - ((6 / 8) ** 2 + (2 / 8) ** 2)
+right_gini = 1 - ((1 / 2) ** 2 + (1 / 2) ** 2)
+weighted_gini = (8 / 10) * left_gini + (2 / 10) * right_gini
+print("weighted gini", weighted_gini)
+
+# a node needs enough samples to split
+small_X = [[1], [2], [3]]
+small_y = [0, 0, 1]
+no_small_split = DecisionTreeClassifier(min_samples_split=5, random_state=42)
+no_small_split.fit(small_X, small_y)
+print("depth with large split limit", no_small_split.get_depth())
+
 # a leaf must have at least 4 samples
 # six samples cannot make two leaves of 4
 no_split = DecisionTreeClassifier(min_samples_leaf=4, random_state=42)
