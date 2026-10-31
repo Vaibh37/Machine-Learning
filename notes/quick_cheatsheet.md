@@ -57,7 +57,9 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 ```
 
-train with train data and check with test data
+train with train data
+
+check with test data
 
 ## preprocessing
 
@@ -77,7 +79,7 @@ recall asks how many actual positives were found
 
 f1 combines precision and recall
 
-we have not practiced f1_score or classification_report yet
+i still need more code practice with f1_score and classification_report
 
 ## knn
 
@@ -117,4 +119,48 @@ print(model.predict(new_X))
 
 do not fit the vectorizer again on a new email
 
-this is a small toy example so do not trust it on real mail
+this is a small practice example
+
+## decision tree
+
+a tree learns questions that split the data
+
+it tries to make groups with less class mixing
+
+gini is 0 when a group has only one class
+
+gini is 0 point 5 for two equal classes
+
+weighted gini gives larger groups more weight
+
+the tree can pick the midpoint between two values
+
+max_depth limits how deep the tree can grow
+
+min_samples_split sets the minimum samples needed before a node can split
+
+min_samples_leaf sets the minimum samples needed in each final leaf
+
+```python
+from sklearn.tree import DecisionTreeClassifier, export_text
+
+X = [[1], [2], [3], [4], [5], [6]]
+y = [0, 0, 0, 1, 1, 1]
+
+model = DecisionTreeClassifier(max_depth=2, random_state=42)
+model.fit(X, y)
+
+print(export_text(model, feature_names=["hours"]))
+print(model.predict([[7]]))
+print(model.feature_importances_)
+```
+
+feature importance shows which features helped reduce impurity
+
+it is not a measure of accuracy
+
+use model.score on train data and test data to compare accuracy
+
+the model can fit training data well but still fail on new data
+
+use two square brackets for one student with one feature
